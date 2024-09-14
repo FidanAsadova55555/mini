@@ -1,0 +1,32 @@
+#sponsors{
+   
+    .logos-row {
+        gap: 15px;
+        
+        img {
+          height: 60px;
+        
+        }
+      
+      
+        .col-auto:nth-child(-n+3) img {
+          width: 150px;
+        }
+      
+      
+        .col-auto:nth-child(n+4) img {
+          width: 180px;
+        }
+     
+      
+        .col-auto {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      
+      
+      
+      
+}

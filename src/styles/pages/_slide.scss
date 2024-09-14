@@ -1,0 +1,149 @@
+.pageimg{
+    height: 100%;
+    @include flexbox(end,center);
+    
+    .image{
+        width:17.375rem;
+        height: 17.375rem;
+        overflow: hidden;
+        border-radius: 50%;
+        img{
+@extend %img;
+        }
+    }
+}
+.pages{
+    background-color: #E1E9FD;
+   
+    padding: 50px 100px 60px 100px;
+    border-radius: 40px 40px 40px 40px;
+    .slidetxt{
+        
+  
+        .icon{
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+h3{
+    position: relative;
+    line-height: 1.5em;
+    color: $color-accent;
+    font-size: 1.5rem;
+    max-width: 700px;
+    font-family: $secondary-font-family;
+    margin: 150px 50px 20px 0px;
+   letter-spacing:0.05rem ;
+}
+p{
+    color: $color-accent;
+    font-family: $secondary-font-family;
+    margin-bottom: 1rem;
+}
+    }
+}
+button{
+    span{
+        width: 50px;
+        height: 50px;
+        @include flexbox(center,center);
+        border: 2px solid $color-secondary;
+        border-radius: 50%;
+        transition: all ease-in-out 0.3s;
+        i{
+            color: $color-secondary;
+            font-size: 24px;
+            transition: all ease-in-out 0.3s;
+        }
+        &:hover{
+            background-color: $secondary-color;
+            i{
+                color: white;
+            }
+        }
+     
+       }
+
+   }
+   .carousel-control-next:focus, .carousel-control-next:hover, .carousel-control-prev:focus, .carousel-control-prev:hover {
+    color: initial;
+    text-decoration: none;
+    outline: 0;
+    opacity: 1;
+}
+
+.carousel-control-prev {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -70px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    width: 15%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity:1;
+    transition: opacity .15s ease;}
+    .carousel-control-next {
+        position: absolute;
+        top: 0;
+        right: -70px;
+        bottom: 0;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        width: 15%;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+        background: 0 0;
+        border: 0;
+        opacity:1;
+        transition: opacity .15s ease;}
+        .carousel-indicators [data-bs-target] {
+            box-sizing: content-box;
+            flex: 0 1 auto;
+            width: 40px;
+            height: 8px;
+            padding: 0;
+            margin-right: 3px;
+            margin-left: 3px;
+            text-indent: -999px;
+            cursor: pointer;
+            background-color: #7d7d7d48;
+            background-clip: padding-box;
+            border: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            opacity:1;
+            transition: opacity .6s ease;
+            border: 1px solid transparent;
+            border-radius: 30px;
+            transition: all ease-in-out 0.3s;
+            &:hover,&:active,&:focus{
+                background-color: $color-primary;
+                
+            }
+        }
+        .carousel-indicators {
+            position: absolute;
+            right: 0;
+            bottom: -60px;
+            left: 0;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin-right: 15%;
+            margin-bottom: 1rem;
+            margin-left: 15%;
+            list-style: none;
+        gap:15px;
+        
+    }

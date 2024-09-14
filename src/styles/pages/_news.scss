@@ -1,0 +1,25 @@
+#news{
+    .cardd{
+
+        .cardimg{
+            height: 219px;
+        }
+    }
+}
+#upcoming{
+  .cardd{
+    .cardimg{
+        height: 253.33px;
+        .tag{
+            background-color:$tag-color;
+            font-family: $primary-font-family;
+        }
+    }
+    .cardtxt{
+        h2{
+            max-width: 350px;
+        }
+    }
+  
+  }  
+}

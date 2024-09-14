@@ -1,0 +1,31 @@
+#Expect{
+    .head{
+        .headtxt{
+            @include flexbox(center,center,column);
+         h1{
+            text-align: center;
+         }
+        }
+    }
+    .checkcard{
+        margin-bottom: 40px;
+        @include flexbox(center,center,column);
+        h3{text-align: center;
+            color: $color-accent;
+            margin: 20px 0;
+            font-size: 1.5rem;
+            font-family: $primary-font-family;
+            line-height: $a539aa8-line-height;
+            font-weight: 700;
+        }
+        p{
+            color: $color-text;
+        max-width: 348px;
+            font-size: $text-font-size;
+            font-size: 1rem;
+            line-height: $secondary-line-height;
+            font-family: $secondary-font-family;
+            text-align: center;
+        }
+    }
+}

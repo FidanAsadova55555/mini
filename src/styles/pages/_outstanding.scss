@@ -1,0 +1,19 @@
+#outstanding{
+  
+    .cardd{
+        .cardimg{
+            height: 7.875rem;
+        }
+        .cardtxt{
+            @include flexbox(center, center, column,3px);
+            h4{
+                margin-bottom:9px;
+                font-size: 1rem;
+            } 
+        }
+        @media screen and (max-width: 1199px) {
+            #left,#right{
+                display:none;
+            }}
+    }
+ }

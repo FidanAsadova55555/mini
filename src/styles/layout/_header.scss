@@ -1,0 +1,298 @@
+
+.p-custom {
+    padding: 0 124px;
+}
+
+
+.logo {
+    padding: 10px 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    .logoimg {
+        width: 160px;
+        height: 36px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+
+.categories {
+    
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    .categorytxt {
+        display: flex;
+        align-items: center;
+        h1 {
+            font-family: $secondary-font-family;
+            font-size: $text-font-size;
+            color: $color-accent;
+            position: relative;
+            i {
+                position: absolute;
+                right: -25px;
+                font-size: 20px;
+                top: calc(50% - 10px);
+            }
+        }
+    }
+    #menu{
+        position: relative;
+        &:hover #submenu{
+            opacity: 1;
+            visibility: visible;
+        }
+        #submenu{
+            position: absolute;
+            min-width: 300px;
+            border: 1px solid transparent;
+            @include flexbox(center,start,column,0px);
+            top: 50px;
+            left: 0;
+            z-index: 2;
+           padding: 10px 5px;
+           background-color: $color-5f782af;
+           opacity: 0;
+           visibility: hidden;
+           box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.1);
+           li{
+            padding:15px;
+            a{
+                
+                text-decoration: none;
+                font-family: $secondary-font-family;
+                font-size: $text-font-size;
+                color: $color-accent;
+                transition: all ease-in-out 0.3s;
+            }
+            &:hover {
+                a{   color:$color-primary;}
+               
+               }
+           }
+          
+        }}
+}
+
+
+.search {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    .searchinput {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background-color: #E1E9FD;
+        border-radius: 10px;
+        i {
+            font-size: 16px;
+            margin: 0 20px;
+        }
+        input {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            line-height: 44px;
+            width: 100%;
+            font-family: $secondary-font-family;
+        }
+        ::placeholder {
+            font-size: 14px;
+            font-weight: 400;
+            font-family: $secondary-font-family;
+            color: $color-accent;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .categories {
+        display: none; 
+    }}
+@media (max-width: 1400px) {
+  
+    .p-custom {
+        padding: 0 20px; 
+    }
+    .logoimg {
+        width: 120px;
+    }
+    .categorytxt h1 {
+        font-size: 14px;
+    }
+    .searchinput {
+        i {
+            margin: 0 10px;
+        }
+        input {
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .logoimg {
+        width: 100px;
+    }
+   
+    .searchinput {
+        i {
+            margin: 0 8px;
+        }
+        input {
+            font-size: 12px;
+        }
+    }
+}
+
+
+@media (max-width: 400px) {
+    .searchinput {
+        i {
+            margin: 0 5px;
+        }
+        input {
+            font-size: 11px;
+        }
+    }
+}
+
+
+
+.leftsidenavbar{
+    ul{
+        
+        @include flexbox(start,center,row,18px);
+        #menu{
+            position: relative;
+            &:hover #submenu{
+                opacity: 1;
+                visibility: visible;
+            }
+            #submenu{
+                z-index: 2;
+                position: absolute;
+                min-width: 300px;
+                border: 1px solid transparent;
+                @include flexbox(center,start,column,0px);
+                top: 50px;
+                left: 0;
+               padding: 10px 5px;
+               background-color: $color-5f782af;
+               opacity: 0;
+               visibility: hidden;
+               box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.1);
+               li{
+                padding:15px;
+                a{
+                    transition: all ease-in-out 0.3s;
+                    color: $color-accent;
+                }
+                &:hover {
+                    a{   color:$color-primary;}
+                   
+                   }
+               }
+              
+            }}
+        li{
+         
+            transition: all ease-in-out 0.3s;
+            padding:26px  15px;
+           
+          
+           
+            a{ text-decoration: none;
+                font-family: $secondary-font-family;
+                font-size: $text-font-size;
+                color: $color-accent;
+                transition: all ease-in-out 0.3s;
+            }
+             
+                position: relative;
+                i{
+                    position: absolute;
+                   right: -8px;
+                   font-size: 20px;
+                   font-weight: 500;
+                   top: calc(50% - 10px);
+                
+                    
+                 
+                }
+                &:hover {
+                 a{   color:$color-primary;}
+                
+                }
+               
+        }
+        
+       
+    }
+}
+
+.rightside{
+padding: 12px 15px;
+@include flexbox(end,center,row,30px);
+.buttonlogin{ @include flexbox(end,center);
+
+}
+a{
+height: 100%;
+@include flexbox(end,center,row,7px);
+font-family: $accent-font-family;
+font-size: $accent-font-size;
+font-weight: $accent-font-weight;
+text-transform: $accent-text-transform;
+line-height: $accent-line-height;
+text-decoration: none;
+color: $color-accent;
+position: relative;
+i{
+position: absolute;
+                   left: -20px;
+              
+                   font-weight: 300;
+                   top: calc(50% - 11px);
+                
+}
+}
+}
+
+
+.button{
+
+@include flexbox(center,center);
+padding: 11px 32px 11px 32px;
+font-family: $accent-font-family;
+font-size:$accent-font-size;
+font-weight: $accent-font-weight;
+text-transform: $accent-text-transform;
+line-height: $accent-line-height;
+background-color:$color-primary;
+border-style: none;
+border-radius: 10px 10px 10px 10px;
+color: $color-5f782af;
+transition: all ease-in-out 0.3s;
+&:hover{
+background-color:$color-secondary;
+}
+
+}
+@media (max-width: 1200px) {
+    .leftsidenavbar {
+        display: none;
+    }
+  
+    }
+    @media(max-width:480px){
+        .rightside{
+            @include flexbox(center,center,row,30px);
+        }
+    }

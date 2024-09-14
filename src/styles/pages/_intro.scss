@@ -1,0 +1,63 @@
+.rightintro{
+    @include flexbox(end,center);
+    padding: 15px 0;
+    .rightintroimg{
+        height: 28.875rem;
+        width:auto;
+       
+        overflow: hidden;
+        img{@extend %img;
+        }
+    }
+}
+.leftintro{
+    
+ .lefttxt{
+    margin-top:100px;
+    @include flexbox(center,start,column);
+    h1{
+        color: $color-accent;
+    font-family: $primary-font-family;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.3em;
+    max-width: 600px;
+   
+    span{
+        color: $color-primary;
+    }
+    }
+    p{ max-width: 570px;
+        margin-top: 15px;
+        margin-bottom: 25px;
+        color: $color-text;
+    font-family:$text-font-family;
+    font-size:1rem;
+    font-weight: $text-font-weight;
+    line-height: $text-line-height;
+    }
+   
+ }
+ .second{
+    background-color: transparent;
+    border: 1px solid $secondary-color;
+    color: $secondary-color;
+    transition: all ease-in-out 0.3s;
+    &:hover{
+        background-color:$color-secondary;
+        color: $color-5f782af;
+        
+    }
+}
+}
+h2{
+    text-align: center;
+    line-height: 1.3em;
+    font-family: $primary-font-family;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $color-accent;
+    margin-top: 100px;
+
+}

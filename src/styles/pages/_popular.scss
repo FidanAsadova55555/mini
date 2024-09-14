@@ -1,0 +1,204 @@
+.head{
+    
+    .headtxt{
+       padding-bottom: 40px;
+       @include flexbox(center,start,column);
+       h1{
+           color: $color-accent;
+       font-family: $primary-font-family;
+       font-size: 36px;
+       font-weight: 700;
+       line-height: 1.3em;
+       span{
+           color: $color-primary;
+       }
+       }}
+     }
+
+     #see{height: 100%;
+      padding-bottom: 40px;
+      @include flexbox(end,center,row);
+      color: $color-secondary;
+      font-family: $secondary-font-family;
+      font-size: 0.875rem;
+      font-weight: 600;
+      line-height: 1.6em;
+      
+      text-transform: capitalize;
+     
+      i{
+        transition: all ease-in-out 0.3s;
+
+        margin-left: 10px;
+        font-weight: 200;
+        font-size: 18px;
+      }
+    
+      p{
+        transition: all ease-in-out 0.3s;
+        &:hover{
+          color: $color-primary;
+          i{
+            color: $color-primary;
+          }}
+      }
+    }  
+
+.cardd {
+
+       
+        border-radius: 0.625rem; 
+        overflow: hidden;
+        margin-bottom: 2.5rem; 
+      
+        .cardimg {
+          height: 11.5625rem; 
+          width: 100%;
+          overflow: hidden;
+          position: relative;
+          .tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #ff971a;
+            color: #ffffff;
+            font-size: 0.875rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: $secondary-font-family;
+          }
+          img {
+            @extend %img;
+          }
+        }
+      
+        .cardtxt {
+          height: calc(100% - 11.5625rem); 
+          height: 100%;
+          background-color: $color-ec35f56;
+          @include flexbox(start, start, column, 0.875rem); 
+          padding: 0.9375rem 0.75rem;
+      
+          h2 {
+            font-size: 1.25rem;
+            font-family: $primary-font-family;
+            font-weight: 600;
+            text-transform: capitalize;
+            text-align: start;
+            color: $color-accent;
+            margin-top: 0;
+            transition: all ease-in-out 0.3s;
+            &:hover{
+              color: $color-primary;
+            }
+          }
+      
+          h3 {
+            color: $color-accent;
+            font-size: 0.875rem; 
+            font-family: $secondary-font-family;
+            font-weight: 600;
+            line-height: 1.6em;     transition: all ease-in-out 0.3s;
+            &:hover{
+              color: $color-primary;
+            }
+          }
+      
+          p {
+            font-size: 0.875rem;
+            font-family: $secondary-font-family;
+            font-weight: 400;
+            line-height: 1.6em;
+            color: $color-text;
+          }
+      
+          h4 {
+            font-size: 0.875rem;
+            font-family: $secondary-font-family;
+            font-weight: 400;
+            line-height: 1.6em;
+            color: $color-text;
+            i{
+              margin-right: 8px;
+            }
+            .news{
+              font-size: 0.875rem;
+              font-family: $secondary-font-family;
+              font-weight: 400;
+              line-height: 1.6em;
+              color: $color-text;
+              margin-right: 8px;
+              &:hover{
+                color: $color-primary;
+              }
+            }
+          }
+      
+          span {
+            font-size: 1.125rem;
+            font-family: $secondary-font-family;
+            font-weight: 700;
+            line-height: 1.6em;
+            color: $color-primary;
+          }
+      
+          .buttonlogin {
+            width: 100%;
+            padding-bottom: 8px;
+      
+            .button {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+      .carouselfirst{
+        position: relative;
+        #left{
+          position: absolute;
+          top: calc(100% - 65%);
+          left: -70px;
+        }
+        #right{
+          position: absolute;
+         
+          top: calc(100% - 65%);
+          right: -70px;
+        }
+        #left,#right{
+          width: 50px;
+          height: 50px;
+          @include flexbox(center,center);
+          border: 2px solid $color-secondary;
+          transition: all 0.3s ease-in-out;
+          border-radius: 50%;
+          &:hover{
+            background-color: $color-secondary;
+            i{
+              color:white;
+              
+            }
+          }
+          i{   transition: all 0.3s ease-in-out;
+              color: $color-secondary;
+              font-size: 24px;
+          }
+      }}
+
+.slidebuttons{
+  @include flexbox(center,center,row,15px);
+.slidebutton{
+  width: 40px;
+  height: 8px;
+  background-color: rgba(133, 121, 121, 0.279);
+  border-radius: 30px;
+  &:hover{
+    background-color: $color-primary;
+  }
+  &:active,&:focus{
+    background-color: $color-primary;
+  }
+}
+}
+  
+
