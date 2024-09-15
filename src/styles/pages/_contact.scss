@@ -1,0 +1,222 @@
+.inputs {
+  padding: 15px 0;
+  .input {
+    font-family: $secondary-font-family;
+    margin-bottom: 12px;
+    h6{
+     
+      color: $warning;
+      font-size: 1em;
+ 
+      line-height: 1.6em;
+      
+    }
+    input,
+    textarea {
+      padding: 10px;
+      width: 100%;
+      line-height: 1.6em;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      border-width: 2px;
+      color: $color-text;
+      border-color: $color-accent;
+      transition: all ease-in-out 0.2s;
+      
+
+      &:focus {
+        border-color: $color-primary;
+        outline: none; 
+      }
+
+      &:active {
+        border-color: $color-primary;
+      }
+      &::placeholder {
+        font-size: 0.875rem;
+        color: $color-text;
+        font-family: $secondary-font-family;
+      }
+    }
+
+    textarea {
+      min-height: 150px;
+      overflow: auto;
+    }
+  }
+
+  .opt {
+    line-height: 1.6em;
+    margin-bottom: 12px;
+    color:$color-text;
+    display: flex;
+    align-items: center;
+    input[type="checkbox"] {
+     
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid $color-accent;
+      border-radius: 50%; 
+      position: relative;
+      cursor: pointer;
+
+      &:checked {
+        background-color: $color-5f782af;
+        border-color: $color-accent;
+       
+      }
+
+      &:checked::before {
+        content: '✓';
+        position: absolute;
+     
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size:12px;
+        font-weight: 900;
+        font-family: $secondary-font-family;
+        color:$color-primary;
+       
+   
+      }
+      ~ h6 {
+        display: block;
+      }
+    }
+
+    label {
+      margin-left: 10px; 
+    }
+  }
+  .privacy{
+    line-height: 1.6em;
+    color: $color-text;
+    margin-bottom:1rem;
+    span{
+      color: $color-primary;
+      font-weight: 600;
+    }
+  }
+  .submit{
+    margin-bottom: 1rem;
+  }
+
+}
+.contactlist{
+  padding: 15px 0;
+  gap: 30px;
+  h2{
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  ul{
+    gap: 15px;
+    li{
+      line-height: 1.6em;
+      text-align: start;
+    
+      span{
+        color: $color-primary;
+        font-weight: 600;
+      }
+    
+      svg{
+        margin-right: 12px;
+        max-width: 23px;
+      height: auto;
+      }
+    }
+  }
+}
+
+  #contacthead{
+    @include flexbox(center,center);
+    padding-bottom: 25px;
+    #contactheader{
+   
+      text-align: center;
+      font-family: $primary-font-family;
+      font-size:2.25rem;
+      
+      font-weight: 700;
+      line-height: 1.4em;
+      color: $color-accent;
+      max-width: 615px;
+    
+    }
+  }
+#contactimg{
+  .text {
+    @include flexbox(center, center);
+    background-color: $color-primary;
+    padding: 105px 0;
+  
+    position: relative; 
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(https://eduma.thimpress.com/demo-marketplace/wp-content/uploads/sites/99/2023/06/bg-line-about.png);
+      background-position:center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0.2; 
+      z-index: 0; 
+    }
+  
+    .txt {
+      padding: 15px;
+     
+      h1{line-height: 1.3em;
+        color: $color-5f782af;
+      text-align: center;
+    width: 100%;}
+      p{
+        color: $color-5f782af;
+        margin-bottom: 0;
+        text-align: center;
+      }
+      opacity: 1; 
+    }
+  }
+  
+}
+#infocontact{
+  .contactinfo{
+    padding: 15px;
+    @include flexbox(center,center,column);
+    span{
+      margin-bottom: 40px;
+    }
+    h3{
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1.3em;
+      font-family: $primary-font-family;
+      margin-bottom: 12px;
+      color: $color-accent;
+    }
+    ul{
+      @include flexbox(center,center,column);
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.6em;
+   color: $color-text;
+      font-family: $secondary-font-family;
+      li{ text-align: center;
+        span{
+          color: $color-primary;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
