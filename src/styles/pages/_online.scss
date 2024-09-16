@@ -3,7 +3,7 @@
     height: 100%;
     .image{
         width: auto;
-        height: 500px;
+        max-height: 500px;
         overflow: hidden;
         img{
        
@@ -16,6 +16,10 @@
    margin-bottom: 20px;
     height: 44px;
     overflow: hidden;
+transition: transform 0.3s ease-in-out;
+    &:hover {
+        transform: translateY(-8px);
+    }
     img{
         @extend %img;
         object-fit: contain;

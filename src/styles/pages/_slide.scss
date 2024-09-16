@@ -3,8 +3,8 @@
     @include flexbox(end,center);
     
     .image{
-        width:17.375rem;
-        height: 17.375rem;
+        max-width:17.375rem;
+        max-height: 17.375rem;
         overflow: hidden;
         border-radius: 50%;
         img{
@@ -34,6 +34,7 @@ h3{
     font-family: $secondary-font-family;
     margin: 150px 50px 20px 0px;
    letter-spacing:0.05rem ;
+   
 }
 p{
     color: $color-accent;
@@ -70,6 +71,7 @@ button{
     text-decoration: none;
     outline: 0;
     opacity: 1;
+
 }
 
 .carousel-control-prev {
@@ -104,12 +106,14 @@ button{
         text-align: center;
         background: 0 0;
         border: 0;
+        
         opacity:1;
         transition: opacity .15s ease;}
         .carousel-indicators [data-bs-target] {
             box-sizing: content-box;
             flex: 0 1 auto;
             width: 40px;
+           
             height: 8px;
             padding: 0;
             margin-right: 3px;
@@ -144,6 +148,22 @@ button{
             margin-bottom: 1rem;
             margin-left: 15%;
             list-style: none;
+         
+    
         gap:15px;
         
     }
+    [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+        cursor: pointer;background-color: transparent;
+    }
+    @media (max-width: 1400px) {
+
+        .carousel-control-prev  {
+          left: 10px;
+          background-color: $color-5f782af;
+        }
+        .carousel-control-next  {
+          right: 10px;
+          background-color: $color-5f782af;
+        }
+      }

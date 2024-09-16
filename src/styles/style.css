@@ -57,7 +57,7 @@ table {
   box-sizing: border-box;
 }
 
-.buttonimg img, .onlineimg .image img, .pageimg .image img, .cardd .cardimg img, .rightintro .rightintroimg img {
+.buttonimg img, .onlineimg .image img, .pageimg .image img, .cardd .cardimg img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -363,12 +363,19 @@ table {
   padding: 15px 0;
 }
 .rightintro .rightintroimg {
-  height: 28.875rem;
-  width: auto;
+  height: auto;
+  width: 100%;
   overflow: hidden;
 }
+.rightintro .rightintroimg img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .leftintro .lefttxt {
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -377,16 +384,16 @@ table {
 .leftintro .lefttxt h1 {
   color: #212427;
   font-family: "Poppins";
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.3em;
-  max-width: 600px;
+  max-width: 100%;
 }
 .leftintro .lefttxt h1 span {
   color: #356DF1;
 }
 .leftintro .lefttxt p {
-  max-width: 570px;
+  max-width: 100%;
   margin-top: 15px;
   margin-bottom: 25px;
   color: #444444;
@@ -395,13 +402,25 @@ table {
   font-weight: 400;
   line-height: 1.6em;
 }
-.leftintro .second {
+.leftintro .buttons .button {
+  background-color: #356DF1;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+.leftintro .buttons .button:hover {
+  background-color: #104fe3;
+}
+.leftintro .buttons .second {
   background-color: transparent;
   border: 1px solid #082645;
   color: #082645;
   transition: all ease-in-out 0.3s;
 }
-.leftintro .second:hover {
+.leftintro .buttons .second:hover {
   background-color: #082645;
   color: #FFFFFF;
 }
@@ -417,6 +436,40 @@ h2 {
   margin-top: 100px;
 }
 
+@media (max-width: 768px) {
+  .leftintro .lefttxt h1 {
+    font-size: 2rem;
+  }
+  .leftintro .lefttxt p {
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 576px) {
+  .leftintro .lefttxt h1 {
+    font-size: 1.8rem;
+  }
+  .leftintro .lefttxt p {
+    font-size: 0.9rem;
+  }
+  h2 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 320px) {
+  .leftintro .lefttxt {
+    margin-top: 30px;
+  }
+  .leftintro .lefttxt h1 {
+    font-size: 1.5rem;
+  }
+  .leftintro .lefttxt p {
+    font-size: 0.85rem;
+  }
+  h2 {
+    font-size: 14px;
+    margin-top: 30px;
+  }
+}
 #sponsors .logos-row {
   gap: 15px;
 }
@@ -586,16 +639,6 @@ h2 {
 .carouselfirst {
   position: relative;
 }
-.carouselfirst #left {
-  position: absolute;
-  top: 35%;
-  left: -70px;
-}
-.carouselfirst #right {
-  position: absolute;
-  top: 35%;
-  right: -70px;
-}
 .carouselfirst #left, .carouselfirst #right {
   width: 50px;
   height: 50px;
@@ -616,6 +659,26 @@ h2 {
   transition: all 0.3s ease-in-out;
   color: #082645;
   font-size: 24px;
+}
+.carouselfirst #left {
+  position: absolute;
+  top: 35%;
+  left: -70px;
+}
+@media (max-width: 1400px) {
+  .carouselfirst #left {
+    left: -10px;
+  }
+}
+.carouselfirst #right {
+  position: absolute;
+  top: 35%;
+  right: -70px;
+}
+@media (max-width: 1400px) {
+  .carouselfirst #right {
+    right: -10px;
+  }
 }
 
 .slidebuttons {
@@ -638,6 +701,16 @@ h2 {
   background-color: #356DF1;
 }
 
+@media (max-width: 1400px) {
+  .carouselfirst #left {
+    left: 10px;
+    background-color: #FFFFFF;
+  }
+  .carouselfirst #right {
+    right: 10px;
+    background-color: #FFFFFF;
+  }
+}
 #outstanding .cardd .cardimg {
   height: 7.875rem;
 }
@@ -704,8 +777,8 @@ h2 {
   align-items: center;
 }
 .pageimg .image {
-  width: 17.375rem;
-  height: 17.375rem;
+  max-width: 17.375rem;
+  max-height: 17.375rem;
   overflow: hidden;
   border-radius: 50%;
 }
@@ -843,19 +916,38 @@ button span:hover i {
   gap: 15px;
 }
 
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+@media (max-width: 1400px) {
+  .carousel-control-prev {
+    left: 10px;
+    background-color: #FFFFFF;
+  }
+  .carousel-control-next {
+    right: 10px;
+    background-color: #FFFFFF;
+  }
+}
 .onlineimg {
   width: 100%;
   height: 100%;
 }
 .onlineimg .image {
   width: auto;
-  height: 500px;
+  max-height: 500px;
   overflow: hidden;
 }
 .buttonimg {
   margin-bottom: 20px;
   height: 44px;
   overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+.buttonimg:hover {
+  transform: translateY(-8px);
 }
 .buttonimg img {
   -o-object-fit: contain;
