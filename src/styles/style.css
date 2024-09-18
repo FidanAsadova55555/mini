@@ -321,6 +321,9 @@ table {
   font-weight: 300;
   top: calc(50% - 11px);
 }
+.rightside .log-in:hover {
+  color: #356DF1;
+}
 
 .button {
   display: flex;

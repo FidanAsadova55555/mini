@@ -262,6 +262,9 @@ position: absolute;
                    top: calc(50% - 11px);
                 
 }
+&:hover{
+    color: $color-primary;
+}
 }
 }
 
