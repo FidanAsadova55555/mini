@@ -243,7 +243,7 @@ padding: 12px 15px;
 .buttonlogin{ @include flexbox(end,center);
 
 }
-a{
+.log-in{
 height: 100%;
 @include flexbox(end,center,row,7px);
 font-family: $accent-font-family;

@@ -299,7 +299,7 @@ table {
   justify-content: end;
   align-items: center;
 }
-.rightside a {
+.rightside .log-in {
   height: 100%;
   display: flex;
   justify-content: end;
@@ -315,7 +315,7 @@ table {
   color: #212427;
   position: relative;
 }
-.rightside a i {
+.rightside .log-in i {
   position: absolute;
   left: -20px;
   font-weight: 300;
@@ -1474,4 +1474,79 @@ button span:hover i {
 #infocontact .contactinfo ul li span {
   color: #356DF1;
   font-weight: 600;
+}
+
+#title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 40px;
+  font-family: "Poppins";
+  margin-bottom: 23px;
+}
+
+.modalinput {
+  padding: 10px 24px;
+  margin-bottom: 20px;
+  border: 2px solid #212427;
+  line-height: 1.6em;
+  min-height: 40px;
+  font-size: 0.875rem;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+  font-family: "Inter";
+}
+.modalinput::-moz-placeholder {
+  font-weight: 300;
+  color: #aeaeae;
+}
+.modalinput::placeholder {
+  font-weight: 300;
+  color: #aeaeae;
+}
+.modalinput:focus {
+  border-color: #356DF1;
+  outline: none;
+}
+.modalinput:active {
+  border-color: #356DF1;
+}
+
+.password {
+  position: relative;
+}
+.password input {
+  width: 100%;
+}
+.password i {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  font-weight: 400;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #aeaeae;
+  z-index: 2;
+}
+
+.modaltxt {
+  font-weight: 360;
+  line-height: 1.6em;
+  font-family: "Inter";
+  font-size: 1rem;
+  text-align: center;
+}
+.modaltxt .underlinedtxt {
+  color: #356DF1;
+  transition: all 0.3s ease-in-out;
+}
+.modaltxt .underlinedtxt:hover {
+  text-decoration: underline;
+}
+
+.modal-backdrop {
+  background-color: rgb(0, 0, 0) !important;
+  opacity: 0.8 !important;
 }/*# sourceMappingURL=style.css.map */
