@@ -3,8 +3,9 @@
     padding: 15px 0;
   
     .rightintroimg {
-      height: auto;
-      width: 100%;
+      max-height: 462px;
+      max-width: 462px;
+      
       overflow: hidden;
   
       img {
@@ -17,7 +18,7 @@
   
   .leftintro {
     .lefttxt {
-      margin-top: 50px;
+      margin-top: 110px;
       @include flexbox(center, start, column);
   
       h1 {
