@@ -33,12 +33,18 @@
             font-size: $text-font-size;
             color: $color-accent;
             position: relative;
+            transition: all ease-in-out 0.3s;
             i {
                 position: absolute;
                 right: -25px;
                 font-size: 20px;
                 top: calc(50% - 10px);
+                transition: all ease-in-out 0.3s;
             }
+        }
+        &:hover{
+            i,h1{color: $color-primary;}
+      
         }
     }
     #menu{
@@ -49,13 +55,14 @@
         }
         #submenu{
             position: absolute;
-            min-width: 300px;
+            min-width: 220px;
             border: 1px solid transparent;
             @include flexbox(center,start,column,0px);
-            top: 50px;
+            top: 27px;
             left: 0;
-            z-index: 2;
+            z-index: 1;
            padding: 10px 5px;
+           
            background-color: $color-5f782af;
            opacity: 0;
            visibility: hidden;
@@ -84,6 +91,9 @@
     display: flex;
     align-items: center;
     padding: 10px 15px;
+    padding-left: 0;
+    z-index: 2;
+    position: relative;
     .searchinput {
         display: flex;
         align-items: center;
@@ -178,10 +188,10 @@
             #submenu{
                 z-index: 2;
                 position: absolute;
-                min-width: 300px;
+                min-width: 290px;
                 border: 1px solid transparent;
                 @include flexbox(center,start,column,0px);
-                top: 50px;
+                top: 65px;
                 left: 0;
                padding: 10px 5px;
                background-color: $color-5f782af;

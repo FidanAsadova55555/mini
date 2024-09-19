@@ -97,12 +97,17 @@ table {
   font-size: 16px;
   color: #212427;
   position: relative;
+  transition: all ease-in-out 0.3s;
 }
 .categories .categorytxt h1 i {
   position: absolute;
   right: -25px;
   font-size: 20px;
   top: calc(50% - 10px);
+  transition: all ease-in-out 0.3s;
+}
+.categories .categorytxt:hover i, .categories .categorytxt:hover h1 {
+  color: #356DF1;
 }
 .categories #menu {
   position: relative;
@@ -113,16 +118,16 @@ table {
 }
 .categories #menu #submenu {
   position: absolute;
-  min-width: 300px;
+  min-width: 220px;
   border: 1px solid transparent;
   display: flex;
   justify-content: center;
   align-items: start;
   flex-direction: column;
   gap: 0px;
-  top: 50px;
+  top: 27px;
   left: 0;
-  z-index: 2;
+  z-index: 1;
   padding: 10px 5px;
   background-color: #FFFFFF;
   opacity: 0;
@@ -147,6 +152,9 @@ table {
   display: flex;
   align-items: center;
   padding: 10px 15px;
+  padding-left: 0;
+  z-index: 2;
+  position: relative;
 }
 .search .searchinput {
   display: flex;
@@ -238,14 +246,14 @@ table {
 .leftsidenavbar ul #menu #submenu {
   z-index: 2;
   position: absolute;
-  min-width: 300px;
+  min-width: 290px;
   border: 1px solid transparent;
   display: flex;
   justify-content: center;
   align-items: start;
   flex-direction: column;
   gap: 0px;
-  top: 50px;
+  top: 65px;
   left: 0;
   padding: 10px 5px;
   background-color: #FFFFFF;
