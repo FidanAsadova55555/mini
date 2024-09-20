@@ -588,7 +588,7 @@ h2 {
   text-transform: capitalize;
   text-align: start;
   color: #212427;
-  margin-top: 0;
+  margin-top: 0px;
   transition: all ease-in-out 0.3s;
 }
 .cardd .cardtxt h2:hover {
@@ -1050,6 +1050,18 @@ button span:hover i {
   height: 219px;
 }
 
+#upcoming .description {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+#upcoming .description .text {
+  color: #212427;
+  font-size: 1rem;
+  font-family: "Inter";
+}
 #upcoming .cardd .cardimg {
   height: 253.33px;
 }
