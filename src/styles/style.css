@@ -1355,8 +1355,17 @@ button span:hover i {
   padding: 15px 0;
 }
 #bloghead .head ul li i {
+  color: rgba(68, 68, 68, 0.3607843137);
   font-size: 1.5rem;
   margin: 0 10px;
+}
+#bloghead .head ul li a {
+  transition: all ease-in-out 0.3s;
+  text-decoration: none;
+  color: #212427;
+}
+#bloghead .head ul li a:hover {
+  color: #356DF1;
 }
 
 #blogbody .head {
