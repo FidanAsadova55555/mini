@@ -2,7 +2,7 @@
     height: 100%;
     padding: 50px 10px 60px 0px;
     @include flexbox(center, center);
-    @media (max-width: 991px) {
+   @media (max-width: 991px) {
         padding: 50px 10px;
     }
     .rightimg {
@@ -49,7 +49,7 @@
   }
   
 
-  @media (max-width: 991px) {
+ @media (max-width: 991px) {
     .row {
       display: flex;
       flex-direction: column;
@@ -285,6 +285,8 @@
   
 button{
     span{
+      cursor: pointer;
+
         width: 50px;
         height: 50px;
         @include flexbox(center,center);
@@ -316,6 +318,7 @@ button{
 }
 
 .carousel-control-prev {
+
     position: absolute;
     top: 0;
     bottom: 0;
@@ -324,7 +327,10 @@ button{
     display: flex;
     align-items: center;
     justify-content:start;
-    width: 15%;
+    width: 20%;
+    @media (max-width: 991px) {
+    display: none;
+  }
     padding: 0;
     color: #fff;
     
@@ -342,13 +348,15 @@ button{
         display: flex;
         align-items: center;
         justify-content: end;
-        width: 15%;
+        width: 20%;
         padding: 0;
         color: #fff;
         text-align: center;
         background: 0 0;
         border: 0;
-        
+        @media (max-width: 991px) {
+          display: none;
+        }
         opacity:1;
         transition: opacity .15s ease;}
         .carousel-indicators [data-bs-target] {
@@ -398,8 +406,13 @@ button{
     }
 
     [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
-        cursor: pointer;
+        cursor: default;
         background-color: rgba(125, 125, 125, 0.2823529412);
+    }
+    .carousel-indicators {
+      .oneslidebutton{
+        cursor: pointer;
+      }
     }
     @media (max-width: 1400px) {
 

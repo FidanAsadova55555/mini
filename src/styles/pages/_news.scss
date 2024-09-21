@@ -21,6 +21,7 @@
     .cardimg{
         height: 253.33px;
         .tag{
+            cursor: default;
             background-color:$tag-color;
             font-family: $primary-font-family;
         }

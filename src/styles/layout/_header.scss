@@ -10,6 +10,8 @@
     display: flex;
     align-items: center;
     .logoimg {
+        cursor: pointer;
+
         width: 160px;
         height: 36px;
         img {
@@ -29,12 +31,16 @@
         display: flex;
         align-items: center;
         h1 {
+
+            cursor: pointer;
+
             font-family: $secondary-font-family;
             font-size: $text-font-size;
             color: $color-accent;
             position: relative;
             transition: all ease-in-out 0.3s;
             i {
+                cursor: initial;
                 position: absolute;
                 right: -25px;
                 font-size: 20px;
@@ -101,6 +107,7 @@
         background-color: #E1E9FD;
         border-radius: 10px;
         i {
+            cursor: pointer;
             font-size: 16px;
             margin: 0 20px;
         }
@@ -215,7 +222,6 @@
          
             transition: all ease-in-out 0.3s;
             padding:26px  15px;
-           
           
            
             a{ text-decoration: none;
@@ -223,10 +229,13 @@
                 font-size: $text-font-size;
                 color: $color-accent;
                 transition: all ease-in-out 0.3s;
+                cursor: pointer;
+
             }
              
                 position: relative;
                 i{
+                    cursor: initial;
                     position: absolute;
                    right: -8px;
                    font-size: 20px;
@@ -254,6 +263,7 @@ padding: 12px 15px;
 
 }
 .log-in{
+cursor: pointer;
 height: 100%;
 @include flexbox(end,center,row,7px);
 font-family: $accent-font-family;
@@ -280,7 +290,7 @@ position: absolute;
 
 
 .button{
-
+cursor: pointer;
 @include flexbox(center,center);
 padding: 11px 32px 11px 32px;
 font-family: $accent-font-family;
