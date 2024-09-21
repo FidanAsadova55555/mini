@@ -118,10 +118,11 @@
     li{
       line-height: 1.6em;
       text-align: start;
-    
+    cursor:initial;
       span{
         color: $color-primary;
         font-weight: 600;
+        cursor: pointer;
       }
     
       svg{
@@ -213,6 +214,7 @@
       font-family: $secondary-font-family;
       li{ text-align: center;
         span{
+          cursor: pointer;
           color: $color-primary;
           font-weight: 600;
         }

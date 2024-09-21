@@ -92,6 +92,7 @@
             font-family: $secondary-font-family;
             @include flexbox(center,start,column,20px);
             li{
+                cursor: pointer;
               color: $color-text;
               font-size: 1rem;
               transition: all ease-in-out 0.3s;

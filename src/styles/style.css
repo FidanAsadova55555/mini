@@ -131,14 +131,16 @@ table {
   top: 27px;
   left: 0;
   z-index: 1;
-  padding: 10px 5px;
+  padding: 15px 0 10px 15px;
   background-color: #FFFFFF;
   opacity: 0;
   visibility: hidden;
   box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.1);
 }
 .categories #menu #submenu li {
-  padding: 15px;
+  padding-bottom: 5px;
+  margin: 15px;
+  margin-bottom: 0;
 }
 .categories #menu #submenu li a {
   text-decoration: none;
@@ -675,6 +677,11 @@ h2 {
   border: 2px solid #082645;
   transition: all 0.3s ease-in-out;
   border-radius: 50%;
+}
+@media (max-width: 991px) {
+  .carouselfirst #left, .carouselfirst #right {
+    display: none;
+  }
 }
 .carouselfirst #left:hover, .carouselfirst #right:hover {
   background-color: #082645;
@@ -1424,6 +1431,7 @@ button span:hover i {
   gap: 20px;
 }
 .blogcard .cardtxt ul li {
+  cursor: pointer;
   color: #444444;
   font-size: 1rem;
   transition: all ease-in-out 0.3s;
@@ -1598,10 +1606,12 @@ button span:hover i {
 .contactlist ul li {
   line-height: 1.6em;
   text-align: start;
+  cursor: initial;
 }
 .contactlist ul li span {
   color: #356DF1;
   font-weight: 600;
+  cursor: pointer;
 }
 .contactlist ul li svg {
   margin-right: 12px;
@@ -1696,6 +1706,7 @@ button span:hover i {
   text-align: center;
 }
 #infocontact .contactinfo ul li span {
+  cursor: pointer;
   color: #356DF1;
   font-weight: 600;
 }
@@ -1763,11 +1774,16 @@ button span:hover i {
   text-align: center;
 }
 .modaltxt .underlinedtxt {
+  cursor: pointer;
   color: #356DF1;
   transition: all 0.3s ease-in-out;
 }
 .modaltxt .underlinedtxt:hover {
   text-decoration: underline;
+}
+
+#modalparagraph {
+  cursor: pointer;
 }
 
 .modal-backdrop {

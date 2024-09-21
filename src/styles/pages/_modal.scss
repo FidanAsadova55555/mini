@@ -58,13 +58,17 @@
     text-align: center;
  
     .underlinedtxt{
-       
+       cursor: pointer;
         color: $color-primary;
        transition: all 0.3s ease-in-out;
         &:hover{
             text-decoration: underline;
         }
     }
+    
+}
+#modalparagraph{
+    cursor: pointer;
 }
 .modal-backdrop {
     background-color: rgb(0, 0, 0) !important; 
