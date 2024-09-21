@@ -12,7 +12,7 @@
         @include flexbox(start,center,row);
         margin-bottom: 40px;
         .text{
-            color:$color-accent ;
+            color:$color-text;
             font-size: 1rem;
             font-family: $secondary-font-family;
         }
